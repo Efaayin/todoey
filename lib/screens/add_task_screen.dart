@@ -9,6 +9,8 @@ class AddTaskScreen extends StatelessWidget {
         padding: EdgeInsets.only(
           left: 30.0,
           right: 30.0,
+          top: 30.0,
+          bottom: 30.0,
         ),
         decoration: BoxDecoration(
           color: Colors.white,
@@ -19,7 +21,6 @@ class AddTaskScreen extends StatelessWidget {
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
-          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
               'Add Task',
@@ -33,13 +34,8 @@ class AddTaskScreen extends StatelessWidget {
               autofocus: true,
               textAlign: TextAlign.center,
               decoration: InputDecoration(
-                border: UnderlineInputBorder(
-                  borderSide: BorderSide(
-                    style: BorderStyle.solid,
-                    color: Colors.lightBlueAccent,
-                    width: 10.0,
-                  ),
-                ),
+                enabledBorder: textFieldBorder(),
+                focusedBorder: textFieldBorder(),
               ),
             ),
             SizedBox(
@@ -57,6 +53,16 @@ class AddTaskScreen extends StatelessWidget {
             )
           ],
         ),
+      ),
+    );
+  }
+
+  UnderlineInputBorder textFieldBorder() {
+    return UnderlineInputBorder(
+      borderSide: BorderSide(
+        style: BorderStyle.solid,
+        color: Colors.lightBlueAccent,
+        width: 2.0,
       ),
     );
   }
