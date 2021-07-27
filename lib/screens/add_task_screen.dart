@@ -1,5 +1,15 @@
 import 'package:flutter/material.dart';
 
+UnderlineInputBorder textFieldBorder() {
+  return UnderlineInputBorder(
+    borderSide: BorderSide(
+      style: BorderStyle.solid,
+      color: Colors.lightBlueAccent,
+      width: 2.0,
+    ),
+  );
+}
+
 class AddTaskScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -53,16 +63,6 @@ class AddTaskScreen extends StatelessWidget {
             )
           ],
         ),
-      ),
-    );
-  }
-
-  UnderlineInputBorder textFieldBorder() {
-    return UnderlineInputBorder(
-      borderSide: BorderSide(
-        style: BorderStyle.solid,
-        color: Colors.lightBlueAccent,
-        width: 2.0,
       ),
     );
   }
