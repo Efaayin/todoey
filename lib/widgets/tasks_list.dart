@@ -21,7 +21,7 @@ class _TasksListState extends State<TasksList> {
         return TaskTile(
             taskTitle: tasks[index].name,
             isChecked: tasks[index].isDone,
-            checkboxCallback: (checkboxState) {
+            checkboxCallback: (bool checkboxState) {
               setState(() {
                 tasks[index].toggleDone();
               });
